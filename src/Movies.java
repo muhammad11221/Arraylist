@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Movies {
@@ -26,7 +27,16 @@ public class Movies {
         Collections.sort(movie);
         for (String moviee : movie) {
 
-            System.out.println(moviee); // alphabetically
+            System.out.println(moviee);
         }
+        Random rnd = new Random(movie.size());
+        int x = rnd.nextInt(movie.size());
+        System.out.println("\nHere is a movie suggestion for tonight!");
+        System.out.println(movie.get(x));
+
+
+        // Exit
+      userinput.close();
+        System.exit(0);
     }
 }
